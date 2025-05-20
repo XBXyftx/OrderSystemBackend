@@ -8,6 +8,9 @@
         <result column="status" property="status"/>
         <result column="created_at" property="createdAt"/>
         <result column="updated_at" property="updatedAt"/>
+        <collection property="operations" ofType="org.xbxyftx.ordersystembackend.entity.OrderOperation"
+                    select="org.xbxyftx.ordersystembackend.mapper.OrderOperationMapper.findByOrderId"
+                    column="id"/>
     </resultMap>
 
     <select id="findById" resultMap="BaseResultMap">

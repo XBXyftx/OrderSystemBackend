@@ -1,0 +1,981 @@
+2025-05-20 14:01:11 - Starting OrderSystemBackendApplication using Java 1.8.0_45 on LAPTOP-V8Q7UHO6 with PID 32212 (D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes started by ASUS in D:\javaAPPS\OrderSystem\OrderSystemBackend)
+2025-05-20 14:01:11 - No active profile set, falling back to 1 default profile: "default"
+2025-05-20 14:01:11 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-05-20 14:01:11 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-20 14:01:11 - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-05-20 14:01:12 - Tomcat initialized with port(s): 8080 (http)
+2025-05-20 14:01:12 - Starting service [Tomcat]
+2025-05-20 14:01:12 - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-05-20 14:01:12 - Initializing Spring embedded WebApplicationContext
+2025-05-20 14:01:12 - Root WebApplicationContext: initialization completed in 957 ms
+2025-05-20 14:01:12 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController': Unsatisfied dependency expressed through field 'orderService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderServiceImpl': Unsatisfied dependency expressed through field 'orderMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderMapper' defined in file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\org\xbxyftx\ordersystembackend\mapper\OrderMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating SqlSource for SqlProvider. Method 'updateStatus' not found in SqlProvider 'org.xbxyftx.ordersystembackend.mapper.OrderSqlProvider'.
+2025-05-20 14:01:12 - Stopping service [Tomcat]
+2025-05-20 14:01:12 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-05-20 14:01:12 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController': Unsatisfied dependency expressed through field 'orderService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderServiceImpl': Unsatisfied dependency expressed through field 'orderMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderMapper' defined in file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\org\xbxyftx\ordersystembackend\mapper\OrderMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating SqlSource for SqlProvider. Method 'updateStatus' not found in SqlProvider 'org.xbxyftx.ordersystembackend.mapper.OrderSqlProvider'.
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$194/2032169857.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.xbxyftx.ordersystembackend.OrderSystemBackendApplication.main(OrderSystemBackendApplication.java:12)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderServiceImpl': Unsatisfied dependency expressed through field 'orderMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderMapper' defined in file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\org\xbxyftx\ordersystembackend\mapper\OrderMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating SqlSource for SqlProvider. Method 'updateStatus' not found in SqlProvider 'org.xbxyftx.ordersystembackend.mapper.OrderSqlProvider'.
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$194/2032169857.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderMapper' defined in file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\org\xbxyftx\ordersystembackend\mapper\OrderMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating SqlSource for SqlProvider. Method 'updateStatus' not found in SqlProvider 'org.xbxyftx.ordersystembackend.mapper.OrderSqlProvider'.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1534)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$194/2032169857.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 36 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating SqlSource for SqlProvider. Method 'updateStatus' not found in SqlProvider 'org.xbxyftx.ordersystembackend.mapper.OrderSqlProvider'.
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$194/2032169857.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1519)
+	... 48 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating SqlSource for SqlProvider. Method 'updateStatus' not found in SqlProvider 'org.xbxyftx.ordersystembackend.mapper.OrderSqlProvider'.
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 62 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating SqlSource for SqlProvider. Method 'updateStatus' not found in SqlProvider 'org.xbxyftx.ordersystembackend.mapper.OrderSqlProvider'.
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:613)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:491)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:633)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:188)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$7f488297.CGLIB$sqlSessionFactory$0(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$7f488297$$FastClassBySpringCGLIB$$8ff2d219.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$7f488297.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 63 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating SqlSource for SqlProvider. Method 'updateStatus' not found in SqlProvider 'org.xbxyftx.ordersystembackend.mapper.OrderSqlProvider'.
+	at org.apache.ibatis.builder.annotation.ProviderSqlSource.<init>(ProviderSqlSource.java:130)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.buildSqlSource(MapperAnnotationBuilder.java:630)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.lambda$parseStatement$2(MapperAnnotationBuilder.java:301)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder$$Lambda$615/1878677242.accept(Unknown Source)
+	at java.util.Optional.ifPresent(Optional.java:159)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:300)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:132)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:864)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.bindMapperForNamespace(XMLMapperBuilder.java:432)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:97)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:611)
+	... 76 common frames omitted
+2025-05-20 14:01:32 - Starting OrderSystemBackendApplication using Java 1.8.0_45 on LAPTOP-V8Q7UHO6 with PID 23736 (D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes started by ASUS in D:\javaAPPS\OrderSystem\OrderSystemBackend)
+2025-05-20 14:01:32 - No active profile set, falling back to 1 default profile: "default"
+2025-05-20 14:01:33 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-05-20 14:01:33 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-20 14:01:33 - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-05-20 14:01:33 - Tomcat initialized with port(s): 8080 (http)
+2025-05-20 14:01:33 - Starting service [Tomcat]
+2025-05-20 14:01:33 - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-05-20 14:01:33 - Initializing Spring embedded WebApplicationContext
+2025-05-20 14:01:33 - Root WebApplicationContext: initialization completed in 961 ms
+2025-05-20 14:01:34 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController': Unsatisfied dependency expressed through field 'orderService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderServiceImpl': Unsatisfied dependency expressed through field 'orderMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderMapper' defined in file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\org\xbxyftx\ordersystembackend\mapper\OrderMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.updateStatus. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+2025-05-20 14:01:34 - Stopping service [Tomcat]
+2025-05-20 14:01:34 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-05-20 14:01:34 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController': Unsatisfied dependency expressed through field 'orderService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderServiceImpl': Unsatisfied dependency expressed through field 'orderMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderMapper' defined in file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\org\xbxyftx\ordersystembackend\mapper\OrderMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.updateStatus. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$194/441001942.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.xbxyftx.ordersystembackend.OrderSystemBackendApplication.main(OrderSystemBackendApplication.java:12)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderServiceImpl': Unsatisfied dependency expressed through field 'orderMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderMapper' defined in file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\org\xbxyftx\ordersystembackend\mapper\OrderMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.updateStatus. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$194/441001942.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderMapper' defined in file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\org\xbxyftx\ordersystembackend\mapper\OrderMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.updateStatus. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1534)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$194/441001942.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 36 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.updateStatus. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$194/441001942.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1519)
+	... 48 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.updateStatus. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 62 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.updateStatus. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:613)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:491)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:633)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:188)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$7f488297.CGLIB$sqlSessionFactory$2(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$7f488297$$FastClassBySpringCGLIB$$8ff2d219.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$7f488297.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 63 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.updateStatus. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:1037)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:993)
+	at org.apache.ibatis.session.Configuration.addMappedStatement(Configuration.java:791)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:297)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.lambda$parseStatement$2(MapperAnnotationBuilder.java:358)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder$$Lambda$615/1878677242.accept(Unknown Source)
+	at java.util.Optional.ifPresent(Optional.java:159)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:300)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:132)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:864)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.bindMapperForNamespace(XMLMapperBuilder.java:432)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:97)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:611)
+	... 76 common frames omitted
+2025-05-20 14:03:22 - Starting OrderSystemBackendApplication using Java 23 on LAPTOP-V8Q7UHO6 with PID 26328 (D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes started by ASUS in D:\javaAPPS\OrderSystem\OrderSystemBackend)
+2025-05-20 14:03:22 - No active profile set, falling back to 1 default profile: "default"
+2025-05-20 14:03:22 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-05-20 14:03:22 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-20 14:03:22 - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2025-05-20 14:03:23 - Tomcat initialized with port(s): 8080 (http)
+2025-05-20 14:03:23 - Starting service [Tomcat]
+2025-05-20 14:03:23 - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-05-20 14:03:23 - Initializing Spring embedded WebApplicationContext
+2025-05-20 14:03:23 - Root WebApplicationContext: initialization completed in 1044 ms
+2025-05-20 14:03:23 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController': Unsatisfied dependency expressed through field 'orderService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderServiceImpl': Unsatisfied dependency expressed through field 'orderMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderMapper' defined in file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\org\xbxyftx\ordersystembackend\mapper\OrderMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+2025-05-20 14:03:23 - Stopping service [Tomcat]
+2025-05-20 14:03:23 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-05-20 14:03:23 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController': Unsatisfied dependency expressed through field 'orderService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderServiceImpl': Unsatisfied dependency expressed through field 'orderMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderMapper' defined in file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\org\xbxyftx\ordersystembackend\mapper\OrderMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.xbxyftx.ordersystembackend.OrderSystemBackendApplication.main(OrderSystemBackendApplication.java:12)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderServiceImpl': Unsatisfied dependency expressed through field 'orderMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderMapper' defined in file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\org\xbxyftx\ordersystembackend\mapper\OrderMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderMapper' defined in file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\org\xbxyftx\ordersystembackend\mapper\OrderMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1534)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 34 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1519)
+	... 45 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 58 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:613)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:491)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:633)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:188)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$fb4ed600.CGLIB$sqlSessionFactory$1(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$fb4ed600$$FastClassBySpringCGLIB$$d13f51ed.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$fb4ed600.sqlSessionFactory(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 59 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:1037)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:993)
+	at org.apache.ibatis.session.Configuration.addMappedStatement(Configuration.java:791)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:297)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.lambda$parseStatement$2(MapperAnnotationBuilder.java:358)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:300)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:132)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:864)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.bindMapperForNamespace(XMLMapperBuilder.java:432)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:97)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:611)
+	... 70 common frames omitted
+2025-05-20 14:05:12 - Starting OrderSystemBackendApplication using Java 1.8.0_45 on LAPTOP-V8Q7UHO6 with PID 25284 (D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes started by ASUS in D:\javaAPPS\OrderSystem\OrderSystemBackend)
+2025-05-20 14:05:12 - No active profile set, falling back to 1 default profile: "default"
+2025-05-20 14:05:12 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-05-20 14:05:12 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-20 14:05:12 - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2025-05-20 14:05:13 - Tomcat initialized with port(s): 8080 (http)
+2025-05-20 14:05:13 - Starting service [Tomcat]
+2025-05-20 14:05:13 - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-05-20 14:05:13 - Initializing Spring embedded WebApplicationContext
+2025-05-20 14:05:13 - Root WebApplicationContext: initialization completed in 1081 ms
+2025-05-20 14:05:13 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController': Unsatisfied dependency expressed through field 'orderService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderServiceImpl': Unsatisfied dependency expressed through field 'orderMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderMapper' defined in file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\org\xbxyftx\ordersystembackend\mapper\OrderMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+2025-05-20 14:05:13 - Stopping service [Tomcat]
+2025-05-20 14:05:13 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-05-20 14:05:13 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController': Unsatisfied dependency expressed through field 'orderService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderServiceImpl': Unsatisfied dependency expressed through field 'orderMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderMapper' defined in file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\org\xbxyftx\ordersystembackend\mapper\OrderMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$194/441001942.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.xbxyftx.ordersystembackend.OrderSystemBackendApplication.main(OrderSystemBackendApplication.java:12)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderServiceImpl': Unsatisfied dependency expressed through field 'orderMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderMapper' defined in file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\org\xbxyftx\ordersystembackend\mapper\OrderMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$194/441001942.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderMapper' defined in file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\org\xbxyftx\ordersystembackend\mapper\OrderMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1534)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$194/441001942.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 36 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$194/441001942.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1519)
+	... 48 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 62 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:613)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:491)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:633)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:188)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$d61fcc7d.CGLIB$sqlSessionFactory$1(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$d61fcc7d$$FastClassBySpringCGLIB$$e4da8c42.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$d61fcc7d.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 63 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:1037)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:993)
+	at org.apache.ibatis.session.Configuration.addMappedStatement(Configuration.java:791)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:297)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.lambda$parseStatement$2(MapperAnnotationBuilder.java:358)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder$$Lambda$615/1954355506.accept(Unknown Source)
+	at java.util.Optional.ifPresent(Optional.java:159)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:300)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:132)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:864)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.bindMapperForNamespace(XMLMapperBuilder.java:432)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:97)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:611)
+	... 76 common frames omitted
+2025-05-20 14:06:16 - Starting OrderSystemBackendApplication using Java 1.8.0_45 on LAPTOP-V8Q7UHO6 with PID 25752 (D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes started by ASUS in D:\javaAPPS\OrderSystem\OrderSystemBackend)
+2025-05-20 14:06:16 - No active profile set, falling back to 1 default profile: "default"
+2025-05-20 14:06:17 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-05-20 14:06:17 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-20 14:06:17 - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-05-20 14:06:17 - Tomcat initialized with port(s): 8080 (http)
+2025-05-20 14:06:17 - Starting service [Tomcat]
+2025-05-20 14:06:17 - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-05-20 14:06:17 - Initializing Spring embedded WebApplicationContext
+2025-05-20 14:06:17 - Root WebApplicationContext: initialization completed in 939 ms
+2025-05-20 14:06:18 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController': Unsatisfied dependency expressed through field 'orderService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderServiceImpl': Unsatisfied dependency expressed through field 'orderMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderMapper' defined in file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\org\xbxyftx\ordersystembackend\mapper\OrderMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+2025-05-20 14:06:18 - Stopping service [Tomcat]
+2025-05-20 14:06:18 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-05-20 14:06:18 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController': Unsatisfied dependency expressed through field 'orderService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderServiceImpl': Unsatisfied dependency expressed through field 'orderMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderMapper' defined in file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\org\xbxyftx\ordersystembackend\mapper\OrderMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$194/441001942.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.xbxyftx.ordersystembackend.OrderSystemBackendApplication.main(OrderSystemBackendApplication.java:12)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderServiceImpl': Unsatisfied dependency expressed through field 'orderMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderMapper' defined in file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\org\xbxyftx\ordersystembackend\mapper\OrderMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$194/441001942.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderMapper' defined in file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\org\xbxyftx\ordersystembackend\mapper\OrderMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1534)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$194/441001942.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 36 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$194/441001942.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1519)
+	... 48 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 62 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:613)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:491)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:633)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:188)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$94b99aca.CGLIB$sqlSessionFactory$1(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$94b99aca$$FastClassBySpringCGLIB$$594bc746.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$94b99aca.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 63 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:1037)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:993)
+	at org.apache.ibatis.session.Configuration.addMappedStatement(Configuration.java:791)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:297)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.lambda$parseStatement$2(MapperAnnotationBuilder.java:358)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder$$Lambda$615/77811359.accept(Unknown Source)
+	at java.util.Optional.ifPresent(Optional.java:159)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:300)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:132)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:864)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.bindMapperForNamespace(XMLMapperBuilder.java:432)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:97)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:611)
+	... 76 common frames omitted
+2025-05-20 14:08:04 - Starting OrderSystemBackendApplication using Java 1.8.0_45 on LAPTOP-V8Q7UHO6 with PID 26324 (D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes started by ASUS in D:\javaAPPS\OrderSystem\OrderSystemBackend)
+2025-05-20 14:08:04 - No active profile set, falling back to 1 default profile: "default"
+2025-05-20 14:08:05 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-05-20 14:08:05 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-20 14:08:05 - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2025-05-20 14:08:05 - Tomcat initialized with port(s): 8080 (http)
+2025-05-20 14:08:05 - Starting service [Tomcat]
+2025-05-20 14:08:05 - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-05-20 14:08:05 - Initializing Spring embedded WebApplicationContext
+2025-05-20 14:08:05 - Root WebApplicationContext: initialization completed in 1169 ms
+2025-05-20 14:08:05 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController': Unsatisfied dependency expressed through field 'orderService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderServiceImpl': Unsatisfied dependency expressed through field 'orderMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderMapper' defined in file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\org\xbxyftx\ordersystembackend\mapper\OrderMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+2025-05-20 14:08:06 - Stopping service [Tomcat]
+2025-05-20 14:08:06 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-05-20 14:08:06 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController': Unsatisfied dependency expressed through field 'orderService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderServiceImpl': Unsatisfied dependency expressed through field 'orderMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderMapper' defined in file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\org\xbxyftx\ordersystembackend\mapper\OrderMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$194/441001942.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.xbxyftx.ordersystembackend.OrderSystemBackendApplication.main(OrderSystemBackendApplication.java:12)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderServiceImpl': Unsatisfied dependency expressed through field 'orderMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderMapper' defined in file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\org\xbxyftx\ordersystembackend\mapper\OrderMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$194/441001942.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderMapper' defined in file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\org\xbxyftx\ordersystembackend\mapper\OrderMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1534)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$194/441001942.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 36 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$194/441001942.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1519)
+	... 48 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 62 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:613)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:491)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:633)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:188)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$94b99aca.CGLIB$sqlSessionFactory$1(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$94b99aca$$FastClassBySpringCGLIB$$594bc746.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$94b99aca.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 63 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for org.xbxyftx.ordersystembackend.mapper.OrderMapper.findByUserId. please check file [D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes\mapper\OrderMapper.xml] and org/xbxyftx/ordersystembackend/mapper/OrderMapper.java (best guess)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:1037)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:993)
+	at org.apache.ibatis.session.Configuration.addMappedStatement(Configuration.java:791)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:297)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.lambda$parseStatement$2(MapperAnnotationBuilder.java:358)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder$$Lambda$615/77811359.accept(Unknown Source)
+	at java.util.Optional.ifPresent(Optional.java:159)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:300)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:132)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:864)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.bindMapperForNamespace(XMLMapperBuilder.java:432)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:97)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:611)
+	... 76 common frames omitted
+2025-05-20 14:08:36 - Starting OrderSystemBackendApplication using Java 1.8.0_45 on LAPTOP-V8Q7UHO6 with PID 28344 (D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes started by ASUS in D:\javaAPPS\OrderSystem\OrderSystemBackend)
+2025-05-20 14:08:36 - No active profile set, falling back to 1 default profile: "default"
+2025-05-20 14:08:37 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-05-20 14:08:37 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-20 14:08:37 - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-05-20 14:08:37 - Tomcat initialized with port(s): 8080 (http)
+2025-05-20 14:08:37 - Starting service [Tomcat]
+2025-05-20 14:08:37 - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-05-20 14:08:37 - Initializing Spring embedded WebApplicationContext
+2025-05-20 14:08:37 - Root WebApplicationContext: initialization completed in 919 ms
+2025-05-20 14:08:38 - DiningHikariPool - Starting...
+2025-05-20 14:08:38 - DiningHikariPool - Start completed.
+2025-05-20 14:08:38 - 
+
+Using generated security password: 811ce7cd-4ca1-42cb-9c85-a79baad6d560
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-20 14:08:38 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@709f0202, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@654e6a90, org.springframework.security.web.context.SecurityContextPersistenceFilter@183ade54, org.springframework.security.web.header.HeaderWriterFilter@236eccd1, org.springframework.security.web.csrf.CsrfFilter@5d152bcd, org.springframework.security.web.authentication.logout.LogoutFilter@7e15f4d4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@65629ac6, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@60f21960, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@14168e1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7412a438, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5974b7e8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66bf40e5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@16a5c7e4, org.springframework.security.web.session.SessionManagementFilter@707ca986, org.springframework.security.web.access.ExceptionTranslationFilter@733c464f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6e829e50]
+2025-05-20 14:08:38 - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-20 14:08:38 - Started OrderSystemBackendApplication in 2.077 seconds (JVM running for 2.311)
+2025-05-20 14:09:54 - Starting OrderSystemBackendApplication using Java 23 on LAPTOP-V8Q7UHO6 with PID 20592 (D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes started by ASUS in D:\javaAPPS\OrderSystem\OrderSystemBackend)
+2025-05-20 14:09:54 - No active profile set, falling back to 1 default profile: "default"
+2025-05-20 14:09:54 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-05-20 14:09:54 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-20 14:09:54 - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-05-20 14:09:55 - Tomcat initialized with port(s): 8080 (http)
+2025-05-20 14:09:55 - Starting service [Tomcat]
+2025-05-20 14:09:55 - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-05-20 14:09:55 - Initializing Spring embedded WebApplicationContext
+2025-05-20 14:09:55 - Root WebApplicationContext: initialization completed in 894 ms
+2025-05-20 14:09:55 - DiningHikariPool - Starting...
+2025-05-20 14:09:55 - DiningHikariPool - Start completed.
+2025-05-20 14:09:55 - 
+
+Using generated security password: d7939b4e-f723-4d9e-b1ff-6b67f3c845a0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-20 14:09:56 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4c13ca07, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7d17906, org.springframework.security.web.context.SecurityContextPersistenceFilter@2db461b5, org.springframework.security.web.header.HeaderWriterFilter@1cb849b2, org.springframework.security.web.csrf.CsrfFilter@5e7cd0df, org.springframework.security.web.authentication.logout.LogoutFilter@7dddfc35, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4e1a3d5a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@11d1735e, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@97beeaf, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4e10a320, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34eaf9c1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5bbf744b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d68954d, org.springframework.security.web.session.SessionManagementFilter@6dd38df2, org.springframework.security.web.access.ExceptionTranslationFilter@304068, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f4adaab]
+2025-05-20 14:09:56 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2025-05-20 14:09:56 - DiningHikariPool - Shutdown initiated...
+2025-05-20 14:09:56 - DiningHikariPool - Shutdown completed.
+2025-05-20 14:09:56 - Stopping service [Tomcat]
+2025-05-20 14:09:56 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-05-20 14:09:56 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-05-20 14:10:16 - Starting OrderSystemBackendApplication using Java 23 on LAPTOP-V8Q7UHO6 with PID 16784 (D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes started by ASUS in D:\javaAPPS\OrderSystem\OrderSystemBackend)
+2025-05-20 14:10:16 - No active profile set, falling back to 1 default profile: "default"
+2025-05-20 14:10:16 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-05-20 14:10:16 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-20 14:10:16 - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2025-05-20 14:10:17 - Tomcat initialized with port(s): 8080 (http)
+2025-05-20 14:10:17 - Starting service [Tomcat]
+2025-05-20 14:10:17 - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-05-20 14:10:17 - Initializing Spring embedded WebApplicationContext
+2025-05-20 14:10:17 - Root WebApplicationContext: initialization completed in 933 ms
+2025-05-20 14:10:17 - DiningHikariPool - Starting...
+2025-05-20 14:10:17 - DiningHikariPool - Start completed.
+2025-05-20 14:10:17 - 
+
+Using generated security password: 461cb5a4-a90d-4184-b1a4-e7aa204ceaf2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-20 14:10:18 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5534e6f1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4c6fc3e7, org.springframework.security.web.context.SecurityContextPersistenceFilter@248b2b61, org.springframework.security.web.header.HeaderWriterFilter@5c79c5ec, org.springframework.security.web.csrf.CsrfFilter@7be7c052, org.springframework.security.web.authentication.logout.LogoutFilter@2b8cf049, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4213bc3e, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@70169464, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@aa8dce8, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5d68954d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@11d1735e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@31082efa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6ad112de, org.springframework.security.web.session.SessionManagementFilter@5bbf744b, org.springframework.security.web.access.ExceptionTranslationFilter@57b711b6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@236b4a44]
+2025-05-20 14:10:18 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2025-05-20 14:10:18 - DiningHikariPool - Shutdown initiated...
+2025-05-20 14:10:18 - DiningHikariPool - Shutdown completed.
+2025-05-20 14:10:18 - Stopping service [Tomcat]
+2025-05-20 14:10:18 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-05-20 14:10:18 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-05-20 14:10:42 - Starting OrderSystemBackendApplication using Java 23 on LAPTOP-V8Q7UHO6 with PID 5748 (D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes started by ASUS in D:\javaAPPS\OrderSystem\OrderSystemBackend)
+2025-05-20 14:10:42 - No active profile set, falling back to 1 default profile: "default"
+2025-05-20 14:10:42 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-05-20 14:10:42 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-20 14:10:42 - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-05-20 14:10:43 - Tomcat initialized with port(s): 8080 (http)
+2025-05-20 14:10:43 - Starting service [Tomcat]
+2025-05-20 14:10:43 - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-05-20 14:10:43 - Initializing Spring embedded WebApplicationContext
+2025-05-20 14:10:43 - Root WebApplicationContext: initialization completed in 870 ms
+2025-05-20 14:10:43 - DiningHikariPool - Starting...
+2025-05-20 14:10:44 - DiningHikariPool - Start completed.
+2025-05-20 14:10:44 - 
+
+Using generated security password: c8f5a913-1d5e-4ca4-b0e5-f13a6be491b3
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-20 14:10:44 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@53e4a19e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62360a68, org.springframework.security.web.context.SecurityContextPersistenceFilter@a1cb94, org.springframework.security.web.header.HeaderWriterFilter@3fe98084, org.springframework.security.web.csrf.CsrfFilter@1bb172dd, org.springframework.security.web.authentication.logout.LogoutFilter@3b01897f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@ab2009f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@c5a2d5, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1450ffa3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3d718248, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@37f41a81, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@47c81e89, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4e756867, org.springframework.security.web.session.SessionManagementFilter@151a6598, org.springframework.security.web.access.ExceptionTranslationFilter@432a6a69, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@44485db]
+2025-05-20 14:10:44 - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-20 14:10:44 - Started OrderSystemBackendApplication in 2.055 seconds (JVM running for 2.473)
+2025-05-20 14:11:33 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-20 14:11:33 - Initializing Servlet 'dispatcherServlet'
+2025-05-20 14:11:33 - Completed initialization in 2 ms
+2025-05-20 14:26:32 - DiningHikariPool - Shutdown initiated...
+2025-05-20 14:26:32 - DiningHikariPool - Shutdown completed.
+2025-05-20 14:32:54 - Starting OrderSystemBackendApplication using Java 23 on LAPTOP-V8Q7UHO6 with PID 28732 (D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes started by ASUS in D:\javaAPPS\OrderSystem\OrderSystemBackend)
+2025-05-20 14:32:54 - No active profile set, falling back to 1 default profile: "default"
+2025-05-20 14:32:54 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-05-20 14:32:54 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-20 14:32:54 - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2025-05-20 14:32:55 - Tomcat initialized with port(s): 8080 (http)
+2025-05-20 14:32:55 - Starting service [Tomcat]
+2025-05-20 14:32:55 - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-05-20 14:32:55 - Initializing Spring embedded WebApplicationContext
+2025-05-20 14:32:55 - Root WebApplicationContext: initialization completed in 931 ms
+2025-05-20 14:32:56 - DiningHikariPool - Starting...
+2025-05-20 14:32:56 - DiningHikariPool - Start completed.
+2025-05-20 14:32:56 - 
+
+Using generated security password: 9d67d3b5-787d-426d-8f32-707ad057a3c4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-20 14:32:56 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@97beeaf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d68954d, org.springframework.security.web.context.SecurityContextPersistenceFilter@34eaf9c1, org.springframework.security.web.header.HeaderWriterFilter@6dd38df2, org.springframework.security.web.csrf.CsrfFilter@8b89b3a, org.springframework.security.web.authentication.logout.LogoutFilter@6106dfb6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@35f760a4, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4ca5cb99, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@f793f15, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@352c3d70, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@55881f40, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@474ce6b8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3ec7eb5, org.springframework.security.web.session.SessionManagementFilter@57b711b6, org.springframework.security.web.access.ExceptionTranslationFilter@1cb849b2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@21c99abf]
+2025-05-20 14:32:56 - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-20 14:32:56 - Started OrderSystemBackendApplication in 2.388 seconds (JVM running for 2.864)
+2025-05-20 14:33:14 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-20 14:33:14 - Initializing Servlet 'dispatcherServlet'
+2025-05-20 14:33:14 - Completed initialization in 1 ms
+2025-05-20 14:36:20 - Starting OrderSystemBackendApplication using Java 1.8.0_45 on LAPTOP-V8Q7UHO6 with PID 4468 (D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes started by ASUS in D:\javaAPPS\OrderSystem\OrderSystemBackend)
+2025-05-20 14:36:20 - No active profile set, falling back to 1 default profile: "default"
+2025-05-20 14:36:20 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-05-20 14:36:20 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-20 14:36:20 - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2025-05-20 14:36:21 - Tomcat initialized with port(s): 8080 (http)
+2025-05-20 14:36:21 - Starting service [Tomcat]
+2025-05-20 14:36:21 - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-05-20 14:36:21 - Initializing Spring embedded WebApplicationContext
+2025-05-20 14:36:21 - Root WebApplicationContext: initialization completed in 1002 ms
+2025-05-20 14:36:21 - DiningHikariPool - Starting...
+2025-05-20 14:36:22 - DiningHikariPool - Start completed.
+2025-05-20 14:36:22 - 
+
+Using generated security password: a0b93da5-7ac8-424c-a641-e63e34bb60b1
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-20 14:36:22 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@34414ffc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1903b5d, org.springframework.security.web.context.SecurityContextPersistenceFilter@4dadd690, org.springframework.security.web.header.HeaderWriterFilter@45e6d1e0, org.springframework.security.web.csrf.CsrfFilter@3becc950, org.springframework.security.web.authentication.logout.LogoutFilter@36776c32, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2ec99035, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7af443a3, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4041739c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5ae1c281, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3281dfc2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@14422d9d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5cff6b74, org.springframework.security.web.session.SessionManagementFilter@4da1f38a, org.springframework.security.web.access.ExceptionTranslationFilter@746c411c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1e225820]
+2025-05-20 14:36:22 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2025-05-20 14:36:22 - DiningHikariPool - Shutdown initiated...
+2025-05-20 14:36:22 - DiningHikariPool - Shutdown completed.
+2025-05-20 14:36:22 - Stopping service [Tomcat]
+2025-05-20 14:36:22 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-05-20 14:36:22 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-05-20 14:36:35 - DiningHikariPool - Shutdown initiated...
+2025-05-20 14:36:35 - DiningHikariPool - Shutdown completed.
+2025-05-20 14:38:13 - Starting OrderSystemBackendApplication using Java 23 on LAPTOP-V8Q7UHO6 with PID 15400 (D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes started by ASUS in D:\javaAPPS\OrderSystem\OrderSystemBackend)
+2025-05-20 14:38:13 - No active profile set, falling back to 1 default profile: "default"
+2025-05-20 14:38:13 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-05-20 14:38:13 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-20 14:38:13 - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2025-05-20 14:38:14 - Tomcat initialized with port(s): 8080 (http)
+2025-05-20 14:38:14 - Starting service [Tomcat]
+2025-05-20 14:38:14 - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-05-20 14:38:14 - Initializing Spring embedded WebApplicationContext
+2025-05-20 14:38:14 - Root WebApplicationContext: initialization completed in 902 ms
+2025-05-20 14:38:14 - DiningHikariPool - Starting...
+2025-05-20 14:38:14 - DiningHikariPool - Start completed.
+2025-05-20 14:38:14 - 
+
+Using generated security password: 56caa38c-911e-453e-9ee9-13b5f483e95d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-20 14:38:15 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7d17906, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@97beeaf, org.springframework.security.web.context.SecurityContextPersistenceFilter@5c79c5ec, org.springframework.security.web.header.HeaderWriterFilter@6fe2a366, org.springframework.security.web.csrf.CsrfFilter@900649e, org.springframework.security.web.authentication.logout.LogoutFilter@71316cd7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@236b4a44, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@31082efa, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5d68954d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@773f3360, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5bbf744b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55881f40, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@f793f15, org.springframework.security.web.session.SessionManagementFilter@99c3cee, org.springframework.security.web.access.ExceptionTranslationFilter@54d60fa1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@69de72ec]
+2025-05-20 14:38:15 - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-20 14:38:15 - Started OrderSystemBackendApplication in 2.117 seconds (JVM running for 2.551)
+2025-05-20 14:38:28 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-20 14:38:28 - Initializing Servlet 'dispatcherServlet'
+2025-05-20 14:38:28 - Completed initialization in 1 ms
+2025-05-20 14:46:05 - DiningHikariPool - Shutdown initiated...
+2025-05-20 14:46:05 - DiningHikariPool - Shutdown completed.
+2025-05-20 14:47:02 - Starting OrderSystemBackendApplication using Java 1.8.0_45 on LAPTOP-V8Q7UHO6 with PID 13896 (D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes started by ASUS in D:\javaAPPS\OrderSystem\OrderSystemBackend)
+2025-05-20 14:47:02 - No active profile set, falling back to 1 default profile: "default"
+2025-05-20 14:47:02 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-05-20 14:47:02 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-20 14:47:02 - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-05-20 14:47:03 - Tomcat initialized with port(s): 8080 (http)
+2025-05-20 14:47:03 - Starting service [Tomcat]
+2025-05-20 14:47:03 - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-05-20 14:47:03 - Initializing Spring embedded WebApplicationContext
+2025-05-20 14:47:03 - Root WebApplicationContext: initialization completed in 1033 ms
+2025-05-20 14:47:03 - DiningHikariPool - Starting...
+2025-05-20 14:47:04 - DiningHikariPool - Start completed.
+2025-05-20 14:47:04 - 
+
+Using generated security password: f4a7d4a2-5a1b-4373-984d-04fe399d5e40
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-20 14:47:04 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@34414ffc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1903b5d, org.springframework.security.web.context.SecurityContextPersistenceFilter@4dadd690, org.springframework.security.web.header.HeaderWriterFilter@45e6d1e0, org.springframework.security.web.csrf.CsrfFilter@3becc950, org.springframework.security.web.authentication.logout.LogoutFilter@36776c32, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2ec99035, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7af443a3, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4041739c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5ae1c281, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3281dfc2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@14422d9d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5cff6b74, org.springframework.security.web.session.SessionManagementFilter@4da1f38a, org.springframework.security.web.access.ExceptionTranslationFilter@746c411c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1e225820]
+2025-05-20 14:47:04 - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-20 14:47:04 - Started OrderSystemBackendApplication in 2.227 seconds (JVM running for 2.488)
