@@ -6,12 +6,18 @@ import org.xbxyftx.ordersystembackend.common.Result;
 import org.xbxyftx.ordersystembackend.dto.UserDTO;
 import org.xbxyftx.ordersystembackend.entity.User;
 import org.xbxyftx.ordersystembackend.service.UserService;
+import org.xbxyftx.ordersystembackend.utils.JwtUtil;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private JwtUtil jwtUtil;
 
     @PostMapping("/register")
     public Result<User> register(@RequestBody UserDTO userDTO) {
