@@ -1,32 +1,31 @@
 // OrderOperation.java
 package org.xbxyftx.ordersystembackend.entity;
 
-import jakarta.persistence.*;
-import lombok.Data;
-
-import java.io.Serializable;
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "order_operations")
-@Data
-public class OrderOperation implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class OrderOperation {
     private Long id;
-
-    @Column(name = "operator_id", nullable = false)
-    private Long operatorId; // 操作者ID（用户ID）
-
-    @Column(name = "order_id", nullable = false)
-    private Long orderId; // 关联订单ID
-
-    @Column(name = "operation_type", length = 50, nullable = false) // 操作类型约束 [[5]]
+    private Long operatorId;
+    private Long orderId;
     private String operationType;
-
-    @Column(name = "operation_content", columnDefinition = "TEXT", nullable = false)
-    private String operationContent; // 操作内容存储JSON
-
-    @Column(name = "created_at", updatable = false)
+    private String operationContent;
     private LocalDateTime createdAt;
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+    
+    public Long getOperatorId() { return operatorId; }
+    public void setOperatorId(Long operatorId) { this.operatorId = operatorId; }
+    
+    public Long getOrderId() { return orderId; }
+    public void setOrderId(Long orderId) { this.orderId = orderId; }
+    
+    public String getOperationType() { return operationType; }
+    public void setOperationType(String operationType) { this.operationType = operationType; }
+    
+    public String getOperationContent() { return operationContent; }
+    public void setOperationContent(String operationContent) { this.operationContent = operationContent; }
+    
+    public LocalDateTime getCreatedAt() { return createdAt; }
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 }

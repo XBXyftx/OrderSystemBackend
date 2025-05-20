@@ -17,7 +17,7 @@ public class UserSqlProvider {
             FROM("users");
             WHERE("username = #{username}");
             if (params.containsKey("password")) {
-                AND("password = #{password}");
+                WHERE("password = #{password}");
             }
         }}.toString();
     }
