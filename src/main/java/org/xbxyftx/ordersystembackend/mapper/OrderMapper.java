@@ -11,14 +11,25 @@ import java.util.List;
 @Mapper
 public interface OrderMapper {
 
-    // 注解方式实现基础操作
-    @Insert("INSERT INTO orders(user_id,dish_info,status) VALUES(#{userId},#{dishInfo},#{status})")
-    @Options(useGeneratedKeys = true, keyProperty = "id")
-    void createOrder(Order order); // 创建订单 [[7]]
+    /**
+     * 根据用户ID查询订单列表
+     */
+    List<Order> findByUserId(@Param("userId") Long userId);
 
-    List<Order> findByUserId(@Param("userId") Long userId); // 查询用户订单及关联操作记录 [[1]]
-
+    /**
+     * 根据订单ID查询订单
+     */
     Order findById(@Param("id") Long id);
+
+    /**
+     * 插入新订单
+     * @return 受影响的行数
+     */
     int insert(Order order);
+
+    /**
+     * 更新订单状态
+     * @return 受影响的行数
+     */
     int updateStatus(@Param("id") Long id, @Param("status") Integer status);
 }

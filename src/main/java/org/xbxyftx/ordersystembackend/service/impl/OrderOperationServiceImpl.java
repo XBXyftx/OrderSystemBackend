@@ -28,4 +28,9 @@ public class OrderOperationServiceImpl implements OrderOperationService {
         
         orderOperationMapper.insert(operation);
     }
+
+    @Override
+    public List<OrderOperation> getOrderOperationsByUserId(Long userId) {
+        return orderOperationMapper.findByUserId(userId);
+    }
 } 

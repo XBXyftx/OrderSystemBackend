@@ -4,9 +4,9 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/order_system?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://localhost:3306/order_system?useUnicode=true&characterEncoding=utf8&useSSL=true
     username: root
-    password: root
+    password: 12341234
     hikari:
       maximum-pool-size: 10
       minimum-idle: 5
@@ -39,4 +39,4 @@ jwt:
 
 logging:
   level:
-    com.ordersystem: debug 
+    org.xbxyftx.ordersystembackend: debug 

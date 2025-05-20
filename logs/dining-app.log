@@ -1241,3 +1241,157 @@ This generated password is for development use only. Your security configuration
 2025-05-20 15:20:33 - Completed initialization in 2 ms
 2025-05-20 15:20:37 - DiningHikariPool - Shutdown initiated...
 2025-05-20 15:20:37 - DiningHikariPool - Shutdown completed.
+2025-05-20 15:52:36 - Starting OrderSystemBackendApplication using Java 23 on LAPTOP-V8Q7UHO6 with PID 16860 (D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes started by ASUS in D:\javaAPPS\OrderSystem\OrderSystemBackend)
+2025-05-20 15:52:36 - No active profile set, falling back to 1 default profile: "default"
+2025-05-20 15:52:37 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-05-20 15:52:37 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-20 15:52:37 - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-05-20 15:52:37 - Tomcat initialized with port(s): 8080 (http)
+2025-05-20 15:52:37 - Starting service [Tomcat]
+2025-05-20 15:52:37 - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-05-20 15:52:37 - Initializing Spring embedded WebApplicationContext
+2025-05-20 15:52:37 - Root WebApplicationContext: initialization completed in 934 ms
+2025-05-20 15:52:38 - 
+
+Using generated security password: f7dc871e-9d47-4963-a655-4f7a8aefa25e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-20 15:52:38 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4ccdacf5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5aa6da2, org.springframework.security.web.context.SecurityContextPersistenceFilter@351e89fc, org.springframework.security.web.header.HeaderWriterFilter@2864f887, org.springframework.web.filter.CorsFilter@1a0d313, org.springframework.security.web.authentication.logout.LogoutFilter@12365bd8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@15586843, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4fbb1144, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13908f9c, org.springframework.security.web.session.SessionManagementFilter@668a32a4, org.springframework.security.web.access.ExceptionTranslationFilter@71dd4624, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@40fe8fd5]
+2025-05-20 15:52:38 - DiningHikariPool - Starting...
+2025-05-20 15:52:38 - DiningHikariPool - Start completed.
+2025-05-20 15:52:38 - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-20 15:52:38 - Started OrderSystemBackendApplication in 2.215 seconds (JVM running for 2.635)
+2025-05-20 15:53:01 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-20 15:53:01 - Initializing Servlet 'dispatcherServlet'
+2025-05-20 15:53:01 - Completed initialization in 0 ms
+2025-05-20 15:58:15 - DiningHikariPool - Shutdown initiated...
+2025-05-20 15:58:15 - DiningHikariPool - Shutdown completed.
+2025-05-20 15:58:17 - Starting OrderSystemBackendApplication using Java 23 on LAPTOP-V8Q7UHO6 with PID 18644 (D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes started by ASUS in D:\javaAPPS\OrderSystem\OrderSystemBackend)
+2025-05-20 15:58:17 - No active profile set, falling back to 1 default profile: "default"
+2025-05-20 15:58:17 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-05-20 15:58:17 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-20 15:58:17 - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2025-05-20 15:58:18 - Tomcat initialized with port(s): 8080 (http)
+2025-05-20 15:58:18 - Starting service [Tomcat]
+2025-05-20 15:58:18 - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-05-20 15:58:18 - Initializing Spring embedded WebApplicationContext
+2025-05-20 15:58:18 - Root WebApplicationContext: initialization completed in 1085 ms
+2025-05-20 15:58:18 - 
+
+Using generated security password: 5338045e-06b7-4aa5-b453-0b58bb02fa6f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-20 15:58:18 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1a0d313, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@13908f9c, org.springframework.security.web.context.SecurityContextPersistenceFilter@e2b3026, org.springframework.security.web.header.HeaderWriterFilter@41bb1f09, org.springframework.web.filter.CorsFilter@329b331f, org.springframework.security.web.authentication.logout.LogoutFilter@30fbc23, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ef037e4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@79d63a4f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@640a8f93, org.springframework.security.web.session.SessionManagementFilter@2b682e9, org.springframework.security.web.access.ExceptionTranslationFilter@507049f2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4fa0ee7e]
+2025-05-20 15:58:18 - DiningHikariPool - Starting...
+2025-05-20 15:58:19 - DiningHikariPool - Start completed.
+2025-05-20 15:58:19 - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-20 15:58:19 - Started OrderSystemBackendApplication in 2.404 seconds (JVM running for 2.887)
+2025-05-20 15:58:29 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-20 15:58:29 - Initializing Servlet 'dispatcherServlet'
+2025-05-20 15:58:29 - Completed initialization in 1 ms
+2025-05-20 16:03:41 - DiningHikariPool - Shutdown initiated...
+2025-05-20 16:03:41 - DiningHikariPool - Shutdown completed.
+2025-05-20 16:03:58 - Starting OrderSystemBackendApplication using Java 1.8.0_45 on LAPTOP-V8Q7UHO6 with PID 13776 (D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes started by ASUS in D:\javaAPPS\OrderSystem\OrderSystemBackend)
+2025-05-20 16:03:58 - No active profile set, falling back to 1 default profile: "default"
+2025-05-20 16:03:59 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-05-20 16:03:59 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-20 16:03:59 - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-05-20 16:03:59 - Tomcat initialized with port(s): 8080 (http)
+2025-05-20 16:03:59 - Starting service [Tomcat]
+2025-05-20 16:03:59 - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-05-20 16:03:59 - Initializing Spring embedded WebApplicationContext
+2025-05-20 16:03:59 - Root WebApplicationContext: initialization completed in 956 ms
+2025-05-20 16:04:00 - 
+
+Using generated security password: 5b9fb217-56df-4eac-843b-a5b5e6046494
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-20 16:04:00 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@463561c5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@659feb22, org.springframework.security.web.context.SecurityContextPersistenceFilter@2d5ef498, org.springframework.security.web.header.HeaderWriterFilter@7ad1caa2, org.springframework.web.filter.CorsFilter@3468ee6e, org.springframework.security.web.authentication.logout.LogoutFilter@63538bb4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2f521c4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@10db6131, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2f4b98f6, org.springframework.security.web.session.SessionManagementFilter@553bc36c, org.springframework.security.web.access.ExceptionTranslationFilter@3662bdff, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5f631ca0]
+2025-05-20 16:04:00 - DiningHikariPool - Starting...
+2025-05-20 16:04:00 - DiningHikariPool - Start completed.
+2025-05-20 16:04:00 - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-20 16:04:00 - Started OrderSystemBackendApplication in 2.044 seconds (JVM running for 2.272)
+2025-05-20 16:04:35 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-20 16:04:35 - Initializing Servlet 'dispatcherServlet'
+2025-05-20 16:04:35 - Completed initialization in 2 ms
+2025-05-20 16:08:45 - Starting OrderSystemBackendApplication using Java 23 on LAPTOP-V8Q7UHO6 with PID 37716 (D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes started by ASUS in D:\javaAPPS\OrderSystem\OrderSystemBackend)
+2025-05-20 16:08:45 - No active profile set, falling back to 1 default profile: "default"
+2025-05-20 16:08:45 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-05-20 16:08:45 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-20 16:08:45 - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-05-20 16:08:46 - Tomcat initialized with port(s): 8080 (http)
+2025-05-20 16:08:46 - Starting service [Tomcat]
+2025-05-20 16:08:46 - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-05-20 16:08:46 - Initializing Spring embedded WebApplicationContext
+2025-05-20 16:08:46 - Root WebApplicationContext: initialization completed in 868 ms
+2025-05-20 16:08:46 - 
+
+Using generated security password: e1410be7-29c8-4247-a774-87de51ec6c3b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-20 16:08:46 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4ccdacf5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5aa6da2, org.springframework.security.web.context.SecurityContextPersistenceFilter@baa227e, org.springframework.security.web.header.HeaderWriterFilter@2475fba3, org.springframework.web.filter.CorsFilter@1a0d313, org.springframework.security.web.authentication.logout.LogoutFilter@6481dce5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2b682e9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@15586843, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13908f9c, org.springframework.security.web.session.SessionManagementFilter@5a4c98d7, org.springframework.security.web.access.ExceptionTranslationFilter@18d30e7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@40fe8fd5]
+2025-05-20 16:08:46 - DiningHikariPool - Starting...
+2025-05-20 16:08:47 - DiningHikariPool - Start completed.
+2025-05-20 16:08:47 - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-20 16:08:47 - Started OrderSystemBackendApplication in 2.073 seconds (JVM running for 2.476)
+2025-05-20 16:09:12 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-20 16:09:12 - Initializing Servlet 'dispatcherServlet'
+2025-05-20 16:09:12 - Completed initialization in 1 ms
+2025-05-20 16:13:20 - DiningHikariPool - Shutdown initiated...
+2025-05-20 16:13:20 - DiningHikariPool - Shutdown completed.
+2025-05-20 16:13:23 - Starting OrderSystemBackendApplication using Java 23 on LAPTOP-V8Q7UHO6 with PID 11544 (D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes started by ASUS in D:\javaAPPS\OrderSystem\OrderSystemBackend)
+2025-05-20 16:13:23 - No active profile set, falling back to 1 default profile: "default"
+2025-05-20 16:13:24 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-05-20 16:13:24 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-20 16:13:24 - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-05-20 16:13:24 - Tomcat initialized with port(s): 8080 (http)
+2025-05-20 16:13:24 - Starting service [Tomcat]
+2025-05-20 16:13:24 - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-05-20 16:13:24 - Initializing Spring embedded WebApplicationContext
+2025-05-20 16:13:24 - Root WebApplicationContext: initialization completed in 856 ms
+2025-05-20 16:13:24 - 
+
+Using generated security password: 9201ca97-b6fe-4cf7-b285-157636de1720
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-20 16:13:25 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@402d6012, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@395281c2, org.springframework.security.web.context.SecurityContextPersistenceFilter@6c9bf3b5, org.springframework.security.web.header.HeaderWriterFilter@76828577, org.springframework.web.filter.CorsFilter@41d20f06, org.springframework.security.web.authentication.logout.LogoutFilter@5ed25612, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@8ac12e6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@40faff12, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3e753289, org.springframework.security.web.session.SessionManagementFilter@3b770d07, org.springframework.security.web.access.ExceptionTranslationFilter@aca2fc3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@184de357]
+2025-05-20 16:13:25 - DiningHikariPool - Starting...
+2025-05-20 16:13:25 - DiningHikariPool - Start completed.
+2025-05-20 16:13:25 - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-20 16:13:25 - Started OrderSystemBackendApplication in 2.037 seconds (JVM running for 2.452)
+2025-05-20 16:14:45 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-20 16:14:45 - Initializing Servlet 'dispatcherServlet'
+2025-05-20 16:14:45 - Completed initialization in 1 ms
+2025-05-20 16:16:56 - DiningHikariPool - Shutdown initiated...
+2025-05-20 16:16:56 - DiningHikariPool - Shutdown completed.
+2025-05-20 16:16:59 - Starting OrderSystemBackendApplication using Java 23 on LAPTOP-V8Q7UHO6 with PID 18624 (D:\javaAPPS\OrderSystem\OrderSystemBackend\target\classes started by ASUS in D:\javaAPPS\OrderSystem\OrderSystemBackend)
+2025-05-20 16:16:59 - No active profile set, falling back to 1 default profile: "default"
+2025-05-20 16:17:00 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-05-20 16:17:00 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-20 16:17:00 - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-05-20 16:17:00 - Tomcat initialized with port(s): 8080 (http)
+2025-05-20 16:17:00 - Starting service [Tomcat]
+2025-05-20 16:17:00 - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-05-20 16:17:00 - Initializing Spring embedded WebApplicationContext
+2025-05-20 16:17:00 - Root WebApplicationContext: initialization completed in 925 ms
+2025-05-20 16:17:01 - 
+
+Using generated security password: c8a56009-c766-45e6-8926-52a483e4a034
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-20 16:17:01 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2c77344f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@121ddca4, org.springframework.security.web.context.SecurityContextPersistenceFilter@fabef2e, org.springframework.security.web.header.HeaderWriterFilter@44384b4a, org.springframework.web.filter.CorsFilter@297bd171, org.springframework.security.web.authentication.logout.LogoutFilter@2565a7d0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7e848aea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@786a3477, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@118cbded, org.springframework.security.web.session.SessionManagementFilter@9f0fc36, org.springframework.security.web.access.ExceptionTranslationFilter@5f883d90, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@438aaa9f]
+2025-05-20 16:17:01 - DiningHikariPool - Starting...
+2025-05-20 16:17:01 - DiningHikariPool - Start completed.
+2025-05-20 16:17:01 - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-20 16:17:01 - Started OrderSystemBackendApplication in 2.144 seconds (JVM running for 2.569)
+2025-05-20 16:17:10 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-20 16:17:10 - Initializing Servlet 'dispatcherServlet'
+2025-05-20 16:17:10 - Completed initialization in 1 ms
+2025-05-20 16:44:42 - DiningHikariPool - Shutdown initiated...
+2025-05-20 16:44:42 - DiningHikariPool - Shutdown completed.

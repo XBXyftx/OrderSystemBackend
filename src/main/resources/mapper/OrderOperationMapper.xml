@@ -14,6 +14,10 @@
         SELECT * FROM order_operations WHERE order_id = #{orderId}
     </select>
 
+    <select id="findByUserId" resultType="org.xbxyftx.ordersystembackend.entity.OrderOperation">
+        SELECT * FROM order_operations WHERE operator_id = #{userId}
+    </select>
+
     <insert id="insert" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO order_operations (operator_id, order_id, operation_type, operation_content, created_at)
         VALUES (#{operatorId}, #{orderId}, #{operationType}, #{operationContent}, NOW())

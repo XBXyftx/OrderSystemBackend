@@ -19,4 +19,10 @@ public class OrderOperationController {
         List<OrderOperation> operations = orderOperationService.getOrderOperations(orderId);
         return Result.success(operations);
     }
+
+    @GetMapping("/user/{userId}")
+    public Result<List<OrderOperation>> getOrderOperationsByUserId(@PathVariable Long userId) {
+        List<OrderOperation> operations = orderOperationService.getOrderOperationsByUserId(userId);
+        return Result.success(operations);
+    }
 } 

@@ -2,6 +2,8 @@
 package org.xbxyftx.ordersystembackend.entity;
 
 import java.time.LocalDateTime;
+import java.util.List;
+import org.xbxyftx.ordersystembackend.entity.OrderOperation;
 
 public class Order {
     private Long id;
@@ -10,6 +12,7 @@ public class Order {
     private Integer status; // 0待支付 1已支付 2制作中 3配送中 4已完成
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+    private List<OrderOperation> operations;
 
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
@@ -28,4 +31,12 @@ public class Order {
     
     public LocalDateTime getUpdatedAt() { return updatedAt; }
     public void setUpdatedAt(LocalDateTime updatedAt) { this.updatedAt = updatedAt; }
+
+    public List<OrderOperation> getOperations() {
+        return operations;
+    }
+
+    public void setOperations(List<OrderOperation> operations) {
+        this.operations = operations;
+    }
 }

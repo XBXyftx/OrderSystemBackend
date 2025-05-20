@@ -6,4 +6,5 @@ import java.util.List;
 public interface OrderOperationService {
     List<OrderOperation> getOrderOperations(Long orderId);
     void recordOperation(Long operatorId, Long orderId, String operationType, String operationContent);
+    List<OrderOperation> getOrderOperationsByUserId(Long userId);
 } 
