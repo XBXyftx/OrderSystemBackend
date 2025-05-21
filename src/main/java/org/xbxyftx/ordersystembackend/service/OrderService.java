@@ -9,4 +9,5 @@ public interface OrderService {
     Order getOrderById(Long id);
     List<Order> getOrdersByUserId(Long userId);
     void updateOrderStatus(Long id, Integer status);
+    void deleteOrder(Long id);
 } 

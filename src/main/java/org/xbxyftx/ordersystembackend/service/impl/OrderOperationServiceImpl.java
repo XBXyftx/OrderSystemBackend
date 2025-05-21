@@ -33,4 +33,14 @@ public class OrderOperationServiceImpl implements OrderOperationService {
     public List<OrderOperation> getOrderOperationsByUserId(Long userId) {
         return orderOperationMapper.findByUserId(userId);
     }
+
+    @Override
+    public List<OrderOperation> getOperationsByOperatorId(Long operatorId) {
+        return orderOperationMapper.findByOperatorId(operatorId);
+    }
+    
+    @Override
+    public void deleteByOrderId(Long orderId) {
+        orderOperationMapper.deleteByOrderId(orderId);
+    }
 } 

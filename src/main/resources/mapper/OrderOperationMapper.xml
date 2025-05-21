@@ -10,7 +10,7 @@
         <result column="created_at" property="createdAt"/>
     </resultMap>
 
-    <select id="findByOrderId" resultMap="BaseResultMap">
+    <select id="findByOrderId" resultType="org.xbxyftx.ordersystembackend.entity.OrderOperation">
         SELECT * FROM order_operations WHERE order_id = #{orderId}
     </select>
 
@@ -18,8 +18,16 @@
         SELECT * FROM order_operations WHERE operator_id = #{userId}
     </select>
 
+    <select id="findByOperatorId" resultType="org.xbxyftx.ordersystembackend.entity.OrderOperation">
+        SELECT * FROM order_operations WHERE operator_id = #{operatorId}
+    </select>
+
     <insert id="insert" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO order_operations (operator_id, order_id, operation_type, operation_content, created_at)
         VALUES (#{operatorId}, #{orderId}, #{operationType}, #{operationContent}, NOW())
     </insert>
+
+    <delete id="deleteByOrderId">
+        DELETE FROM order_operations WHERE order_id = #{orderId}
+    </delete>
 </mapper> 

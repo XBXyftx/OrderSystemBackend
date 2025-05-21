@@ -32,4 +32,10 @@ public interface OrderMapper {
      * @return 受影响的行数
      */
     int updateStatus(@Param("id") Long id, @Param("status") Integer status);
+
+    /**
+     * 删除订单
+     * @return 受影响的行数
+     */
+    int deleteById(@Param("id") Long id);
 }

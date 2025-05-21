@@ -114,23 +114,26 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public void updateOrderStatus(Long id, Integer status) {
-        if (id == null) {
-            throw new BusinessException("订单ID不能为空");
-        }
-        if (status == null) {
-            throw new BusinessException("订单状态不能为空");
+        logger.info("开始更新订单状态，订单ID={}, 新状态={}", id, status);
+        
+        // 先查询订单是否存在
+        logger.info("开始查询订单，订单ID={}", id);
+        Order order = orderMapper.findById(id);
+        logger.info("订单查询结果：{}", order);
+        
+        if (order == null) {
+            throw new BusinessException("订单不存在");
         }
         
-        logger.info("开始更新订单状态，订单ID={}, 新状态={}", id, status);
-        Order order = getOrderById(id);
+        // 更新订单状态
         int rows = orderMapper.updateStatus(id, status);
         logger.info("订单状态更新结果：受影响行数={}", rows);
         
         if (rows == 0) {
-            throw new BusinessException("订单状态更新失败：数据库更新返回0行");
+            throw new BusinessException("订单状态更新失败");
         }
         
-        // 记录状态更新操作
+        // 记录订单状态更新操作
         try {
             logger.info("开始记录订单状态更新操作，订单ID={}, 用户ID={}", id, order.getUserId());
             orderOperationService.recordOperation(
@@ -141,8 +144,49 @@ public class OrderServiceImpl implements OrderService {
             );
             logger.info("订单状态更新操作记录创建成功");
         } catch (Exception e) {
-            logger.error("创建订单状态更新操作记录失败", e);
-            // 这里不抛出异常，因为订单状态已经更新成功
+            logger.error("记录订单状态更新操作失败", e);
+        }
+    }
+
+    @Override
+    public void deleteOrder(Long id) {
+        logger.info("开始删除订单，订单ID={}", id);
+        
+        // 先查询订单是否存在
+        logger.info("开始查询订单，订单ID={}", id);
+        Order order = orderMapper.findById(id);
+        logger.info("订单查询结果：{}", order);
+        
+        if (order == null) {
+            throw new BusinessException("订单不存在");
+        }
+        
+        try {
+            // 先记录订单删除操作
+            logger.info("开始记录订单删除操作，订单ID={}, 用户ID={}", id, order.getUserId());
+            orderOperationService.recordOperation(
+                order.getUserId(),
+                id,
+                "DELETE",
+                "删除订单"
+            );
+            logger.info("订单删除操作记录创建成功");
+            
+            // 删除订单相关的操作记录
+            logger.info("开始删除订单相关的操作记录，订单ID={}", id);
+            orderOperationService.deleteByOrderId(id);
+            logger.info("订单相关的操作记录删除成功");
+            
+            // 删除订单
+            int rows = orderMapper.deleteById(id);
+            logger.info("订单删除结果：受影响行数={}", rows);
+            
+            if (rows == 0) {
+                throw new BusinessException("订单删除失败");
+            }
+        } catch (Exception e) {
+            logger.error("删除订单失败", e);
+            throw new BusinessException("删除订单失败：" + e.getMessage());
         }
     }
 } 

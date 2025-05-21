@@ -10,4 +10,6 @@ public interface OrderOperationMapper {
     List<OrderOperation> findByOrderId(@Param("orderId") Long orderId);
     int insert(OrderOperation operation);
     List<OrderOperation> findByUserId(@Param("userId") Long userId);
+    List<OrderOperation> findByOperatorId(Long operatorId);
+    void deleteByOrderId(Long orderId);
 } 

@@ -7,4 +7,6 @@ public interface OrderOperationService {
     List<OrderOperation> getOrderOperations(Long orderId);
     void recordOperation(Long operatorId, Long orderId, String operationType, String operationContent);
     List<OrderOperation> getOrderOperationsByUserId(Long userId);
+    List<OrderOperation> getOperationsByOperatorId(Long operatorId);
+    void deleteByOrderId(Long orderId);
 } 

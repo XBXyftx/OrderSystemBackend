@@ -32,4 +32,8 @@
             updated_at = NOW()
         WHERE id = #{id}
     </update>
+
+    <delete id="deleteById">
+        DELETE FROM orders WHERE id = #{id}
+    </delete>
 </mapper> 
