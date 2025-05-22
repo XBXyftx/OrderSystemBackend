@@ -12,10 +12,15 @@ public class UserSqlProvider {
      * @return 动态生成的SQL语句
      */
     public String findByCondition(Map<String, Object> params) {
+        // 创建一个SQL对象
         return new SQL() {{
+            // 查询所有字段
             SELECT("*");
+            // 从users表中选择
             FROM("users");
+            // 根据用户名查询
             WHERE("username = #{username}");
+            // 如果参数Map中包含password，则根据密码查询
             if (params.containsKey("password")) {
                 WHERE("password = #{password}");
             }

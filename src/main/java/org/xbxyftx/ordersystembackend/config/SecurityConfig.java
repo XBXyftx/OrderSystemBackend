@@ -6,6 +6,7 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @org.springframework.context.annotation.Configuration
 public class SecurityConfig {
+    // 创建一个SecurityFilterChain Bean
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.cors() // 允许CORS
